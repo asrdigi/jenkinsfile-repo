@@ -4,7 +4,8 @@ pipeline {
 	stage('Maven Compile'){
 		steps{
 				echo 'Project compile stage'
-				mvn compile
+				bat label: 'Compilation running', script: '''mvn compile'''
+	       
 		}
 	}
 	
